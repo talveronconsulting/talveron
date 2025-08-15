@@ -16,7 +16,7 @@
   <meta property="og:image" content="https://talveronconsulting.github.io/talveron/og-image.png" />
   <meta name="twitter:card" content="summary_large_image" />
 
-<link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700;900&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;700&display=swap" rel="stylesheet">
 
   <style>
     :root{
@@ -47,12 +47,27 @@
     .card{background:var(--surface); border:1px solid var(--outline); border-radius:var(--radius); box-shadow:var(--shadow); padding:32px}
 
     .brand{display:flex; align-items:center; gap:14px; margin-bottom:10px}
+	
+	.brand-main {
+	display:block;             /* Forces onto its own line */
+	font-family: 'Montserrat', sans-serif;
+	font-weight:300;           /* Light weight */
+	line-height: 1;
+	}
+
+	.brand-sub {
+	display:block;             /* Forces onto next line */
+	font-size:0.6em;           /* Smaller size */
+	font-weight:300;           /* Match light weight */
+	line-height: 1;
+	}
+	
     .logo{width:44px; height:44px; border-radius:12px; display:grid; place-items:center; color:#0b0f1e;
       background: linear-gradient(145deg, var(--silver-1), var(--silver-2));
       box-shadow: inset 0 1px 0 rgba(255,255,255,.4), inset 0 -1px 0 rgba(0,0,0,.2);
       font-weight:900;
     }
-    h1{margin:0; font-size:clamp(28px, 4.8vw, 48px); letter-spacing:.4px; font-family: 'Montserrat', sans-serif;}
+    h1{margin:0; font-size:clamp(28px, 4.8vw, 48px); letter-spacing:.4px; font-family: 'Montserrat', sans-serif; font-weight:400; line-height: 1.1;}
     .tag{display:inline-block; margin-top:10px; font-size:14px; color:var(--muted)}
 
     .coming{margin:24px 0 8px; font-size:clamp(20px, 2.6vw, 28px); font-weight:700; background:linear-gradient(145deg,var(--silver-1), var(--silver-2)); -webkit-background-clip:text; background-clip:text; color:transparent}
@@ -82,7 +97,10 @@
     <div class="card" role="region" aria-label="Talveron Consulting">
       <div class="brand">
         <div class="logo" aria-hidden="true">T</div>
-        <h1>Talveron Consulting</h1>
+        <h1>
+			<span class="brand-main">Talveron</span>
+			<span class="brand-sub">&nbsp;&nbsp;Consulting</span>
+		</h1>
       </div>
       <div class="coming">Coming soon</div>
       <p class="sub">A sharper way to get from red to green.</p>
